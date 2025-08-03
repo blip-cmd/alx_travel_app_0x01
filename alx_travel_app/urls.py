@@ -3,8 +3,6 @@ from django.urls import path, re_path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from rest_framework.routers import DefaultRouter
-from listings.views import ListingViewSet, BookingViewSet
 
 # Schema view configuration for Swagger
 schema_view = get_schema_view(
@@ -20,10 +18,6 @@ schema_view = get_schema_view(
     permission_classes=[permissions.AllowAny],
 )
 
-router = DefaultRouter()
-router.register(r"listings", ListingViewSet, basename="listing")
-router.register(r"bookings", BookingViewSet, basename="booking")
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path(
@@ -31,5 +25,5 @@ urlpatterns = [
         schema_view.with_ui("swagger", cache_timeout=0),
         name="schema-swagger-ui",
     ),
-    path("api/", include(router.urls)),
+    path("api/", include("listings.urls")),
 ]
