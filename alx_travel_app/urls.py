@@ -25,5 +25,5 @@ urlpatterns = [
         schema_view.with_ui("swagger", cache_timeout=0),
         name="schema-swagger-ui",
     ),
-    path("api/", include("listings.urls")),
+    path("api/", include("alx_travel_app.listings.urls")),
 ]

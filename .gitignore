@@ -1,1 +1,15 @@
 GUIDELINES.md
+db.sqlite3
+ALX_Travel_App_API_Tests.postman_collection.json
+ALX_Travel_App_Environment.postman_environment.json
+API_Testing_Guide.md
+test_api_endpoints.ps1
+test_api_simplified.ps1
+.env
+cache/
+*.cache
+__pycache__/
+alx_travel_app/__pycache__/settings.cpython-313.pyc
+alx_travel_app/__pycache__/urls.cpython-313.pyc
+
+API_Testing_Results.md
