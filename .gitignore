@@ -13,3 +13,10 @@ alx_travel_app/__pycache__/settings.cpython-313.pyc
 alx_travel_app/__pycache__/urls.cpython-313.pyc
 
 API_Testing_Results.md
+
+# Generated and local files
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
